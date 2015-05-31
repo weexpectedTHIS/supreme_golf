@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://supremegolf.com/api/v4/courses/3002
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Vary:
+      - Accept-Encoding
+      - Origin
+      Status:
+      - 200 OK
+      X-Api-Version:
+      - 4.1.7
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6922416c-dd74-4cc9-97d6-3a04c46aff47
+      X-Runtime:
+      - '0.011657'
+      X-Powered-By:
+      - Phusion Passenger 4.0.59
+      Date:
+      - Sun, 31 May 2015 04:17:22 GMT
+      Server:
+      - nginx + Phusion Passenger 4.0.59
+    body:
+      encoding: UTF-8
+      string: '{"course":{"id":3002,"slug":"temecula-creek-inn-oaks-course-california","name":"Temecula
+        Creek Inn - Oaks Course","description":"The 9-hole \"Oaks\" course at the
+        Temecula Creek Inn facility in Temecula, California features 3,436 yards of
+        golf from the longest tees for a par of 36. Designed by Ted Robinson, ASGCA,
+        the Oaks golf course opened in 1969.","address_1":"44501 Rainbow Canyon Rd","address_2":null,"address_3":null,"address_city":"Temecula","address_state":"CA","address_zipcode":"92592-5988","address_country":"United
+        States of America","phone":"855.685.9299","url":"http://www.temeculacreekinn.com/","time_zone":"America/Los_Angeles","latitude":33.46898,"longitude":-117.128529,"rating":3.0,"rounded_rating":3.0,"rating_count":3,"rough_tee_time_count":0,"avg_rate":"22.0","avg_regular_rate":"22.0","min_rate":"22.0","min_regular_rate":"22.0","max_rate":"22.0","max_regular_rate":"22.0","course_url":"https://supremegolf.com/tee-times/at/temecula-creek-inn-oaks-course-california","course_reviews_url":"https://supremegolf.com/tee-times/at/temecula-creek-inn-oaks-course-california/reviews","photo_thumb_url":"https://supremegolf.s3.amazonaws.com/assets/courses/3002/thumb.jpg?1420237939","photo_medium_url":"https://supremegolf.s3.amazonaws.com/assets/courses/3002/medium.jpg?1420237939","photo_large_url":"https://supremegolf.s3.amazonaws.com/assets/courses/3002/large.jpg?1420237939"}}'
+    http_version: 
+  recorded_at: Sun, 31 May 2015 04:17:22 GMT
+recorded_with: VCR 2.9.3

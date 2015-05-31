@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://supremegolf.com/api/v4/tee_times/352638828/valid?qty=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '152'
+      Connection:
+      - close
+      Status:
+      - 200 OK
+      X-Api-Version:
+      - 4.1.7
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"d372abf1eeded17b53022b6b91018568"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f88fa97b-f73f-4dbe-9a6f-ca9fbbeb0483
+      X-Runtime:
+      - '0.664541'
+      Vary:
+      - Origin
+      X-Powered-By:
+      - Phusion Passenger 4.0.59
+      Date:
+      - Sun, 31 May 2015 04:30:39 GMT
+      Server:
+      - nginx + Phusion Passenger 4.0.59
+    body:
+      encoding: UTF-8
+      string: '{"reservation_url":"https://supremegolf.com/tee-times/book-it/golf18_network/the-golf-club-of-california-california/may-31/2/352638828","players":[1,2]}'
+    http_version: 
+  recorded_at: Sun, 31 May 2015 04:30:39 GMT
+recorded_with: VCR 2.9.3
