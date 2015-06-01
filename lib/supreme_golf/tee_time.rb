@@ -1,7 +1,9 @@
 module SupremeGolf
   class TeeTime < SupremeGolf::Base
-    AT_URL = "#{SupremeGolf::API_BASE_URL}/tee_times/at"
-    VALID_URL = "#{SupremeGolf::API_BASE_URL}/tee_times"
+    API_URLS = {
+      at:           "#{SupremeGolf::API_BASE_URL}/tee_times/at",
+      valid:        "#{SupremeGolf::API_BASE_URL}/tee_times"
+    }
 
     ATTRS = [:id,
       :course_id,
@@ -19,7 +21,7 @@ module SupremeGolf
     attr_accessor *ATTRS
 
     def self.at course_id, params: {}
-      response = self.response_from_api "#{AT_URL}/#{course_id}", params
+      response = self.response_from_api "#{API_URLS[:at]}/#{course_id}", params
 
       response['tee_times'].map do |tee_time_params|
         new(tee_time_params)
@@ -27,7 +29,7 @@ module SupremeGolf
     end
 
     def self.valid id, params: {}
-      response = self.response_from_api "#{VALID_URL}/#{id}/valid", params
+      response = self.response_from_api "#{API_URLS[:valid]}/#{id}/valid", params
 
       response['reservation_url']
     end

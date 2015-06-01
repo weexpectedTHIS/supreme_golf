@@ -9,7 +9,7 @@ class SupremeGolfTest < Minitest::Test
     end
 
     it 'should use x_api_key in request header' do
-      Faraday.expects(:get).with("#{SupremeGolf::Course::FIND_URL}/3002", {}, {'X-Api-Key' => 'testkey'}).returns(stub(body: {course: {}}.to_json))
+      Faraday.expects(:get).with("#{SupremeGolf::Course::API_URLS[:find]}/3002", {}, {'X-Api-Key' => 'testkey'}).returns(stub(body: {course: {}}.to_json))
       SupremeGolf::Course.find(3002)
     end
   end

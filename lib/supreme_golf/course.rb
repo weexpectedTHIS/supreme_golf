@@ -1,7 +1,9 @@
 module SupremeGolf
   class Course < SupremeGolf::Base
-    FIND_URL = "#{SupremeGolf::API_BASE_URL}/courses"
-    NEAR_URL = "#{SupremeGolf::API_BASE_URL}/courses/near"
+    API_URLS = {
+      find:           "#{SupremeGolf::API_BASE_URL}/courses",
+      near:           "#{SupremeGolf::API_BASE_URL}/courses/near"
+    }
 
     ATTRS = [:id,
       :slug,
@@ -39,14 +41,14 @@ module SupremeGolf
     attr_accessor *ATTRS
 
     def self.find id
-      response = self.response_from_api "#{FIND_URL}/#{id}"
+      response = self.response_from_api "#{API_URLS[:find]}/#{id}"
 
       raise 'RecordNotFound' unless response['course']
       new(response['course'])
     end
 
     def self.near params: {}
-      response = self.response_from_api NEAR_URL, params
+      response = self.response_from_api API_URLS[:near], params
 
       response['courses'].map do |course_params|
         new(course_params)
