@@ -1,3 +1,4 @@
+require 'minitest/autorun'
 require './test/test_helper'
 
 class SupremeGolfCourseTest < Minitest::Test

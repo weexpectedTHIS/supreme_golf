@@ -1,6 +1,7 @@
 module SupremeGolf
   class TeeTime < SupremeGolf::Base
     API_URLS = {
+      find:         "#{SupremeGolf::API_BASE_URL}/tee_times",
       at:           "#{SupremeGolf::API_BASE_URL}/tee_times/at",
       valid:        "#{SupremeGolf::API_BASE_URL}/tee_times"
     }

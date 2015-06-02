@@ -65,4 +65,41 @@ class SupremeGolfTeeTimeTest < Minitest::Test
       end
     end
   end
+
+  describe 'find' do
+    it 'gives back expected info' do
+      VCR.use_cassette('find_tee_time') do
+        tee_time = SupremeGolf::TeeTime.find '367049106'
+
+        expected_values = {
+          id: 367049106,
+          course_id: 3003,
+          currency: "USD",
+          players: [
+            1,
+            2,
+            3,
+            4
+          ],
+          rate: "65.00",
+          regular_rate: "80.52",
+          savings_pct: 19,
+          savings_amount: "15.52",
+          tee_off_at_formatted: "10:10AM",
+          tee_off_at_iso8601: "2015-06-02T10:10:00Z",
+          amenities: [
+            "is_18_holes",
+            "is_riding"
+          ],
+          provider: {
+            "code" => "golf18_network",
+            "name" => "Golf18 Network"
+          }
+        }
+        expected_values.each do |attr, value|
+          assert_equal value, tee_time.send(attr), "#{attr} accesses value"
+        end
+      end
+    end
+  end
 end

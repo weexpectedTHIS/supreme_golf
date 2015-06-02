@@ -40,13 +40,6 @@ module SupremeGolf
     ]
     attr_accessor *ATTRS
 
-    def self.find id
-      response = self.response_from_api "#{API_URLS[:find]}/#{id}"
-
-      raise 'RecordNotFound' unless response['course']
-      new(response['course'])
-    end
-
     def self.near params: {}
       response = self.response_from_api API_URLS[:near], params
 

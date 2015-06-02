@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://supremegolf.com/api/v4/tee_times/367049106
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '341'
+      Connection:
+      - close
+      Status:
+      - 200 OK
+      X-Api-Version:
+      - 4.1.7
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"8ae4d3114a5b3c942f281d27d1491737"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f45acb24-7d10-4c9a-b409-6b5aead73382
+      X-Runtime:
+      - '0.013376'
+      Vary:
+      - Origin
+      X-Powered-By:
+      - Phusion Passenger 4.0.59
+      Date:
+      - Tue, 02 Jun 2015 17:06:51 GMT
+      Server:
+      - nginx + Phusion Passenger 4.0.59
+    body:
+      encoding: UTF-8
+      string: '{"tee_time":{"id":367049106,"course_id":3003,"currency":"USD","players":[1,2,3,4],"rate":"65.00","regular_rate":"80.52","savings_pct":19,"savings_amount":"15.52","tee_off_at_formatted":"10:10AM","tee_off_at_iso8601":"2015-06-02T10:10:00Z","amenities":["is_18_holes","is_riding"],"provider":{"code":"golf18_network","name":"Golf18
+        Network"}}}'
+    http_version: 
+  recorded_at: Tue, 02 Jun 2015 17:06:51 GMT
+recorded_with: VCR 2.9.3
