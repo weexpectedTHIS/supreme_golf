@@ -24,7 +24,7 @@ module SupremeGolf
     def self.at course_id, params: {}
       response = self.response_from_api "#{API_URLS[:at]}/#{course_id}", params
 
-      response['tee_times'].map do |tee_time_params|
+      response['tee_times'].to_a.map do |tee_time_params|
         new(tee_time_params)
       end
     end

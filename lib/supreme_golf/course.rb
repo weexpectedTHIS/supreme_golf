@@ -43,7 +43,7 @@ module SupremeGolf
     def self.near params: {}
       response = self.response_from_api API_URLS[:near], params
 
-      response['courses'].map do |course_params|
+      response['courses'].to_a.map do |course_params|
         new(course_params)
       end
     end
